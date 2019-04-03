@@ -1,12 +1,10 @@
-const http = require('http');
+const express = require('express');
 
-const logger = require('./utilities/logger');
+const logger = require('./logger');
 
-const { handleRequest } = require('./req-handler');
+const app = express();
+const port = process.env.PORT || 3001;
 
-const port = 3001;
-const ip = '127.0.0.1';
+app.use(express.static('build'));
 
-const server = http.createServer(handleRequest);
-
-server.listen(port, ip, () => logger.appStarted(ip, port));
+app.listen(port, () => logger.appStarted(port));

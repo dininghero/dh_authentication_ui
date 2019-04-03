@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -23,7 +24,7 @@ module.exports = {
   },
   output: {
     path: `${__dirname}../../../build`,
-    filename: 'main.js',
+    filename: '[name].[contenthash].js',
   },
   optimization: {
     splitChunks: {
@@ -31,7 +32,6 @@ module.exports = {
         vendor: {
           test: /node_modules/,
           chunks: 'all',
-          filename: 'vendor.js',
           enforce: true,
         },
       },
@@ -53,6 +53,9 @@ module.exports = {
         minifyURLs: true,
       },
       inject: true,
+    }),
+    new CleanWebpackPlugin({
+      verbose: true,
     }),
   ],
 };

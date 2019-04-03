@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -24,7 +25,7 @@ module.exports = {
   },
   output: {
     path: `${__dirname}../../../build`,
-    filename: 'main.js',
+    filename: '[name].js',
   },
   optimization: {
     splitChunks: {
@@ -32,7 +33,6 @@ module.exports = {
         vendor: {
           test: /node_modules/,
           chunks: 'all',
-          filename: 'vendor.js',
           enforce: true,
         },
       },
@@ -42,6 +42,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'app/index.html',
       inject: true,
+    }),
+    new CleanWebpackPlugin({
+      verbose: true,
     }),
   ],
   devServer: {
