@@ -11,7 +11,7 @@ exports.handleRequest = (req, res) => {
   }
 
   if (method === 'GET') {
-    if (url === '/' || url === '/bundle.js' || url === '/favicon.ico') {
+    if (url === '/' || url === '/main.js' || url === '/vendor.js' || url === '/favicon.ico') {
       serveFile(res, filePath);
     } else {
       res.writeHead(404);
