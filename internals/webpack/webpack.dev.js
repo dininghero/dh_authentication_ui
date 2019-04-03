@@ -1,3 +1,6 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
 module.exports = {
   mode: 'development',
   watch: true,
@@ -21,12 +24,32 @@ module.exports = {
     extensions: ['*', '.js', '.jsx'],
   },
   output: {
-    path: `${__dirname}../../../dist`,
-    publicPath: '/',
-    filename: 'bundle.js',
+    path: `${__dirname}../../../build`,
+    filename: '[name].js',
   },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /node_modules/,
+          chunks: 'all',
+          enforce: true,
+        },
+      },
+    },
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'app/index.html',
+      inject: true,
+      favicon: 'app/images/favicon.ico',
+    }),
+    new CleanWebpackPlugin({
+      verbose: true,
+    }),
+  ],
   devServer: {
-    contentBase: './dist',
+    contentBase: './build',
     watchContentBase: true,
     port: 8080,
     overlay: {
