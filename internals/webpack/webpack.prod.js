@@ -53,6 +53,7 @@ module.exports = {
         minifyURLs: true,
       },
       inject: true,
+      favicon: 'app/images/favicon.ico',
     }),
     new CleanWebpackPlugin({
       verbose: true,
