@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import App from './components/App';
+import Router from './components/Router';
 
 const MOUNT_NODE = document.getElementById('app');
 
-render(<App />, MOUNT_NODE);
+render(<Router />, MOUNT_NODE);
