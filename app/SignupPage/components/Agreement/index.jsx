@@ -21,7 +21,11 @@ const Agreement = ({ isAgreementChecked, toggleCheckAgreement }) => (
       />
     </Grid>
     <Grid item xs={9}>
-      <Typography variant="caption" align="center" color="textSecondary">
+      <Typography
+        variant="caption"
+        align="center"
+        color="textSecondary"
+      >
         {'By clicking "Create My Account", you accept our Term of Service and Privacy Policy.'}
       </Typography>
     </Grid>

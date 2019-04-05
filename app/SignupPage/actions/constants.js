@@ -7,3 +7,4 @@ export const CHECK_AGREEMENT = 'dh_auth/signup/CHECK_AGREEMENT';
 export const CHECK_VALID_PASSWORD = 'dh_auth/signup/CHECK_VALID_PASSWORD';
 export const CHECK_VALID_FIRSTNAME = 'dh_auth/signup/CHECK_VALID_FIRSTNAME';
 export const CHECK_VALID_LASTNAME = 'dh_auth/signup/CHECK_VALID_LASTNAME';
+export const CHECK_VALID_EMAIL = 'dh_auth/signup/CHECK_VALID_EMAIL';

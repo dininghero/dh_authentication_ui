@@ -14,6 +14,10 @@ const mapDispatchToProps = dispatch => ({
       dispatch(checkValidLastName(false));
       return dispatch(addLastName(evt.target.value));
     }
+    if (evt.target.value.length === 0) {
+      dispatch(checkValidLastName(false));
+      return dispatch(addLastName(''));
+    }
     return dispatch(checkValidLastName(true));
   },
 });

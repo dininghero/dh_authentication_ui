@@ -8,19 +8,19 @@ const Validator = ({ isInvalidPassword, password }) => (
     {isInvalidPassword ? (
       <div>
         <FormHelperText error={password.length < 8}>
-          Must have at least 8 characters
+          Must have at least 8 characters.
         </FormHelperText>
         <FormHelperText error={!(/[a-z]/.test(password))}>
-          Must contain at least one lowercase letter
+          Must contain at least one lowercase letter.
         </FormHelperText>
         <FormHelperText error={!(/[A-Z]/.test(password))}>
-          Must contain at least one uppercase letter
+          Must contain at least one uppercase letter.
         </FormHelperText>
         <FormHelperText error={!(/\d/.test(password))}>
-          Must contain at least one numeric digit
+          Must contain at least one numeric digit.
         </FormHelperText>
         <FormHelperText error={!(/[~`!#$%^&*+=\-[\]\\';,/{}|\\":<>?]/.test(password))}>
-          Must contain at least one special character
+          Must contain at least one special character.
         </FormHelperText>
       </div>
     ) : null}

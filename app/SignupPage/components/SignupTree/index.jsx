@@ -14,6 +14,8 @@ import CompanyLogo from '../CompanyLogo';
 import Welcome from '../Welcome';
 import Encryption from '../Encryption';
 
+import style from './style';
+
 const SignupTree = () => (
   <Grid container spacing={24}>
 
@@ -52,10 +54,7 @@ const SignupTree = () => (
     <Grid item xs={12}>
       <Divider
         variant="middle"
-        style={{
-          marginTop: 15,
-          marginBottom: -10,
-        }}
+        style={style.divider}
       />
     </Grid>
 

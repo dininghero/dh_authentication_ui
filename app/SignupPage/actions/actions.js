@@ -8,6 +8,7 @@ import {
   CHECK_VALID_PASSWORD,
   CHECK_VALID_FIRSTNAME,
   CHECK_VALID_LASTNAME,
+  CHECK_VALID_EMAIL,
 } from './constants';
 
 export function addFirstName(fn) {
@@ -67,6 +68,13 @@ export function checkValidFirstName(isValid) {
 export function checkValidLastName(isValid) {
   return {
     type: CHECK_VALID_LASTNAME,
+    payload: isValid,
+  };
+}
+
+export function checkValidEmail(isValid) {
+  return {
+    type: CHECK_VALID_EMAIL,
     payload: isValid,
   };
 }

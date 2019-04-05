@@ -1,11 +1,25 @@
 import { connect } from 'react-redux';
 
-import { addEmail } from '../actions/actions';
+import { addEmail, checkValidEmail } from '../actions/actions';
 
 import Email from '../components/Email';
 
-const mapDispatchToProps = dispatch => ({
-  addEmail: evt => dispatch(addEmail(evt.target.value)),
+const mapStateToProps = state => ({
+  isInvalidEmail: state.signupReducer.isInvalidEmail,
 });
 
-export default connect(null, mapDispatchToProps)(Email);
+const mapDispatchToProps = dispatch => ({
+  addEmail: (evt) => {
+    if (/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(evt.target.value)) {
+      dispatch(checkValidEmail(false));
+      return dispatch(addEmail(evt.target.value));
+    }
+    if (evt.target.value.length === 0) {
+      dispatch(checkValidEmail(false));
+      return dispatch(addEmail(''));
+    }
+    return dispatch(checkValidEmail(true));
+  },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Email);

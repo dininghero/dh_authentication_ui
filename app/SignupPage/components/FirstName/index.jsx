@@ -6,7 +6,7 @@ import TextField from '@material-ui/core/TextField';
 const FirstName = ({ addFirstName, isInvalidFirstName }) => (
   <TextField
     error={isInvalidFirstName}
-    helperText={isInvalidFirstName ? 'Invalid Characters' : null}
+    helperText={isInvalidFirstName ? 'Invalid Characters.' : null}
     fullWidth
     label="First name"
     margin="normal"

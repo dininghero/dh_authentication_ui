@@ -14,6 +14,10 @@ const mapDispatchToProps = dispatch => ({
       dispatch(checkValidFirstName(false));
       return dispatch(addFirstName(evt.target.value));
     }
+    if (evt.target.value.length === 0) {
+      dispatch(checkValidFirstName(false));
+      return dispatch(addFirstName(''));
+    }
     return dispatch(checkValidFirstName(true));
   },
 });

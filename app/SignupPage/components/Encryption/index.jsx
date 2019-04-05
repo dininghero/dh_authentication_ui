@@ -5,7 +5,6 @@ import IconButton from '@material-ui/core/IconButton';
 import Lock from '@material-ui/icons/Lock';
 import Typography from '@material-ui/core/Typography';
 
-
 const Encryption = () => (
   <Grid
     container

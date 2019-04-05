@@ -44,6 +44,10 @@ const mapDispatchToProps = dispatch => ({
       dispatch(addPassword(evt.target.value));
       validation.length = true;
     }
+    if (evt.target.value.length === 0) {
+      dispatch(checkValidPassword(false));
+      return dispatch(addPassword(''));
+    }
 
     if (validation.lower
       && validation.upper

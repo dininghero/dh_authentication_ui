@@ -3,19 +3,22 @@ import PropTypes from 'prop-types';
 
 import TextField from '@material-ui/core/TextField';
 
-const Email = ({ addEmail }) => (
+const Email = ({ addEmail, isInvalidEmail }) => (
   <TextField
+    error={isInvalidEmail}
+    helperText={isInvalidEmail ? 'Please enter a valid email address.' : null}
     fullWidth
     label="Email Address"
     margin="normal"
     required
     onChange={addEmail}
-    type="email"
+    type="text"
   />
 );
 
 Email.propTypes = {
   addEmail: PropTypes.func.isRequired,
+  isInvalidEmail: PropTypes.bool.isRequired,
 };
 
 export default Email;

@@ -1,11 +1,21 @@
 import React from 'react';
 
+import Center from '../../../StyledComponents/Center';
+
 import dhLogo from '../../../images/dh_logo.png';
 
 const CompanyLogo = () => (
-  <div style={{ textAlign: 'center' }}>
+  <Center>
     <img src={dhLogo} alt="" width="200" />
-  </div>
+  </Center>
 );
+
+// import React, { memo } from 'react';
+
+// const CompanyLogo = memo(() => (
+//   <Center>
+//     <img src={dhLogo} alt="" width="200" />
+//   </Center>
+// ));
 
 export default CompanyLogo;

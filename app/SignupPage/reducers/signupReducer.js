@@ -8,6 +8,7 @@ import {
   CHECK_VALID_PASSWORD,
   CHECK_VALID_FIRSTNAME,
   CHECK_VALID_LASTNAME,
+  CHECK_VALID_EMAIL,
 } from '../actions/constants';
 
 const initialState = {
@@ -18,6 +19,7 @@ const initialState = {
   isInvalidPassword: false,
   isInvalidFirstName: false,
   isInvalidLastName: false,
+  isInvalidEmail: false,
   isPasswordShowing: false,
   isAgreementChecked: false,
 };
@@ -68,6 +70,11 @@ const signupReducer = (state = initialState, action) => {
       return {
         ...state,
         isInvalidLastName: action.payload,
+      };
+    case CHECK_VALID_EMAIL:
+      return {
+        ...state,
+        isInvalidEmail: action.payload,
       };
     default:
       return state;

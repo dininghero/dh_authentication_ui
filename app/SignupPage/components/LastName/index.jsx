@@ -6,7 +6,7 @@ import TextField from '@material-ui/core/TextField';
 const LastName = ({ addLastName, isInvalidLastName }) => (
   <TextField
     error={isInvalidLastName}
-    helperText={isInvalidLastName ? 'Invalid Characters' : null}
+    helperText={isInvalidLastName ? 'Invalid Characters.' : null}
     fullWidth
     label="Last name"
     margin="normal"

@@ -23,7 +23,5 @@ render(
 );
 
 // TODO
-// check why one char is left in state but not for email
-// email validation
 // handle fetch post
 // reactMemo prevent rerender for some components
