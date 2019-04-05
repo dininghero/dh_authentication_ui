@@ -3,12 +3,12 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
 
-import OnChangeDisplayPassword from '../../../containers/OnChangeDisplayPassword';
-import CheckAgreement from '../../../containers/CheckAgreement';
-import DisableButton from '../../../containers/DisableButton';
-import OnChangeFirstName from '../../../containers/OnChangeFirstName';
-import OnChangeLastName from '../../../containers/OnChangeLastName';
-import OnChangeEmail from '../../../containers/OnChangeEmail';
+import OnChangeDisplayPassword from '../../containers/OnChangeDisplayPassword';
+import CheckAgreement from '../../containers/CheckAgreement';
+import DisableButton from '../../containers/DisableButton';
+import OnChangeFirstName from '../../containers/OnChangeFirstName';
+import OnChangeLastName from '../../containers/OnChangeLastName';
+import OnChangeEmail from '../../containers/OnChangeEmail';
 
 import CompanyLogo from '../CompanyLogo';
 import Welcome from '../Welcome';

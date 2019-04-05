@@ -4,7 +4,7 @@ import { createStore, compose } from 'redux';
 import { Provider } from 'react-redux';
 
 import rootReducer from './rootReducer';
-import Router from './components/Router';
+import Router from './Router';
 
 // const store = createStore(
 //   rootReducer,
@@ -23,6 +23,7 @@ render(
 );
 
 // TODO
+// check why one char is left in state but not for email
 // email validation
 // handle fetch post
 // reactMemo prevent rerender for some components

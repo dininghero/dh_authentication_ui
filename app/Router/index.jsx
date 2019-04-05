@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import theme from './theme';
 
-import SignupForm from '../SignupPage/SignupForm';
+import SignupForm from '../SignupPage/components/SignupForm';
 import Login from '../LoginPage/Login';
 
 const Router = () => (

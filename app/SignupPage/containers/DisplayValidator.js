@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import Validator from '../components/SignupPage/Validator';
+import Validator from '../components/Validator';
 
 const mapStateToProps = state => ({
   isInvalidPassword: state.signupReducer.isInvalidPassword,

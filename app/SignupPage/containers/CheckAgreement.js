@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 
 import { toggleCheckAgreement } from '../actions/actions';
 
-import Agreement from '../components/SignupPage/Agreement';
+import Agreement from '../components/Agreement';
 
 const mapStateToProps = state => ({
   isAgreementChecked: state.signupReducer.isAgreementChecked,

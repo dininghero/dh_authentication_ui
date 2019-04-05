@@ -6,7 +6,7 @@ import {
   checkValidPassword,
 } from '../actions/actions';
 
-import Password from '../components/SignupPage/Password';
+import Password from '../components/Password';
 
 const mapStateToProps = state => ({
   isPasswordShowing: state.signupReducer.isPasswordShowing,

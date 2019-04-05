@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import CreateAccount from '../components/SignupPage/CreateAccount';
+import CreateAccount from '../components/CreateAccount';
 
 const mapStateToProps = state => ({
   isButtonDisable: state.signupReducer.isAgreementChecked,
