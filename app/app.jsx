@@ -21,7 +21,3 @@ render(
   </Provider>,
   MOUNT_NODE,
 );
-
-// TODO
-// handle fetch post
-// reactMemo prevent rerender for some components
