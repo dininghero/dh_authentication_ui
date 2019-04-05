@@ -23,7 +23,6 @@ render(
 );
 
 // TODO
-// validation string on password logic
-// validation string on first and last name
+// email validation
 // handle fetch post
 // reactMemo prevent rerender for some components

@@ -15,12 +15,46 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   toggleShowPassword: () => dispatch(toggleShowPassword()),
-  addPassword: evt => dispatch(addPassword(evt.target.value)),
+  addPassword: (evt) => {
+    const validation = {
+      lower: false,
+      upper: false,
+      number: false,
+      special: false,
+      length: false,
+    };
+
+    if (/[a-z]/.test(evt.target.value)) {
+      dispatch(addPassword(evt.target.value));
+      validation.lower = true;
+    }
+    if (/[A-Z]/.test(evt.target.value)) {
+      dispatch(addPassword(evt.target.value));
+      validation.upper = true;
+    }
+    if (/\d/.test(evt.target.value)) {
+      dispatch(addPassword(evt.target.value));
+      validation.number = true;
+    }
+    if (/[~`!#$%^&*+=\-[\]\\';,/{}|\\":<>?]/.test(evt.target.value)) {
+      dispatch(addPassword(evt.target.value));
+      validation.special = true;
+    }
+    if (evt.target.value.length >= 8) {
+      dispatch(addPassword(evt.target.value));
+      validation.length = true;
+    }
+
+    if (validation.lower
+      && validation.upper
+      && validation.number
+      && validation.special
+      && validation.length) {
+      return dispatch(checkValidPassword(false));
+    }
+
+    return dispatch(checkValidPassword(true));
+  },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Password);
-
-
-// when user add one letter toggle isInvalidPassword to true
-// function that validate steps by steps password requirement
-// change color to requirement to green instead of red (emoji)

@@ -8,12 +8,13 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 import IconButton from '@material-ui/core/IconButton';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
-import FormHelperText from '@material-ui/core/FormHelperText';
+
+import DisplayValidator from '../../../containers/DisplayValidator';
 
 const Password = ({
-  isPasswordShowing,
   toggleShowPassword,
   addPassword,
+  isPasswordShowing,
   isInvalidPassword,
 }) => (
   <FormControl fullWidth required>
@@ -30,15 +31,7 @@ const Password = ({
         </InputAdornment>
       )}
     />
-    {isInvalidPassword ? (
-      <div>
-        <FormHelperText error>Must have at least 8 characters</FormHelperText>
-        <FormHelperText error>Must contain at least one lowercase letter</FormHelperText>
-        <FormHelperText error>Must contain at least one uppercase letter</FormHelperText>
-        <FormHelperText error>Must contain at least one numeric digit</FormHelperText>
-        <FormHelperText error>Must contain at least one special character</FormHelperText>
-      </div>
-    ) : null}
+    <DisplayValidator />
   </FormControl>
 );
 
