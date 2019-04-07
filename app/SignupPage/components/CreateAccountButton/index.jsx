@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 
 import Center from '../../../StyledComponents/Center';
 
-const CreateAccount = ({
+const CreateAccountButton = ({
   isAgreementChecked,
   isInvalidFirstName,
   isInvalidLastName,
@@ -30,7 +30,7 @@ const CreateAccount = ({
   </Center>
 );
 
-CreateAccount.propTypes = {
+CreateAccountButton.propTypes = {
   isAgreementChecked: PropTypes.bool.isRequired,
   isInvalidFirstName: PropTypes.bool.isRequired,
   isInvalidLastName: PropTypes.bool.isRequired,
@@ -38,4 +38,4 @@ CreateAccount.propTypes = {
   isInvalidEmail: PropTypes.bool.isRequired,
 };
 
-export default CreateAccount;
+export default CreateAccountButton;

@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import FormHelperText from '@material-ui/core/FormHelperText';
 
 const Validator = ({ isInvalidPassword, password }) => (
-  <div>
+  <React.Fragment>
     {isInvalidPassword ? (
-      <div>
+      <React.Fragment>
         <FormHelperText error={password.length < 8}>
           Must have at least 8 characters.
         </FormHelperText>
@@ -22,9 +22,9 @@ const Validator = ({ isInvalidPassword, password }) => (
         <FormHelperText error={!(/[~`!#$%^&*+=\-[\]\\';,/{}|\\":<>?]/.test(password))}>
           Must contain at least one special character.
         </FormHelperText>
-      </div>
+      </React.Fragment>
     ) : null}
-  </div>
+  </React.Fragment>
 );
 
 Validator.propTypes = {

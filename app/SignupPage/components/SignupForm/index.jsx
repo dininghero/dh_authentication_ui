@@ -2,16 +2,14 @@ import React from 'react';
 
 import Grid from '@material-ui/core/Grid';
 
-import SignupTree from '../SignupTree';
+import CreateAccount from '../../containers/CreateAccount';
 
 import style from './style';
 
 const SignupForm = () => (
   <Grid container justify="center">
     <Grid item style={style.grid}>
-      <form>
-        <SignupTree />
-      </form>
+      <CreateAccount />
     </Grid>
   </Grid>
 );

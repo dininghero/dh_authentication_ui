@@ -4,9 +4,9 @@ import {
   toggleShowPassword,
   addPassword,
   checkValidPassword,
-} from '../actions/actions';
+} from '../../actions/actions';
 
-import Password from '../components/Password';
+import Password from '../../components/Password';
 
 const mapStateToProps = state => ({
   isPasswordShowing: state.signupReducer.isPasswordShowing,

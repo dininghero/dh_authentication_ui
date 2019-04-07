@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import CreateAccount from '../components/CreateAccount';
+import CreateAccountButton from '../../components/CreateAccountButton';
 
 const mapStateToProps = state => ({
   isAgreementChecked: state.signupReducer.isAgreementChecked,
@@ -10,4 +10,4 @@ const mapStateToProps = state => ({
   isInvalidEmail: state.signupReducer.isInvalidEmail,
 });
 
-export default connect(mapStateToProps, null)(CreateAccount);
+export default connect(mapStateToProps)(CreateAccountButton);

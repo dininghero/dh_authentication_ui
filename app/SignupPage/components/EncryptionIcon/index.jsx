@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import Grid from '@material-ui/core/Grid';
 import IconButton from '@material-ui/core/IconButton';
 import Lock from '@material-ui/icons/Lock';
 import Typography from '@material-ui/core/Typography';
 
-const Encryption = () => (
+const EncryptionIcon = memo(() => (
   <Grid
     container
     direction="column"
@@ -23,6 +23,6 @@ const Encryption = () => (
       </Typography>
     </Grid>
   </Grid>
-);
+));
 
-export default Encryption;
+export default EncryptionIcon;

@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 
-import { addFirstName, checkValidFirstName } from '../actions/actions';
+import { addFirstName, checkValidFirstName } from '../../actions/actions';
 
-import FirstName from '../components/FirstName';
+import FirstName from '../../components/FirstName';
 
 const mapStateToProps = state => ({
   isInvalidFirstName: state.signupReducer.isInvalidFirstName,
