@@ -9,7 +9,9 @@
     "build": "webpack --config internals/webpack/webpack.prod.js",
     "dev": "webpack --config internals/webpack/webpack.dev.js",
     "hotdev": "webpack-dev-server --config internals/webpack/webpack.dev.js --hot",
-    "analyze": "webpack --config internals/webpack/webpack.prod.js --profile --json > stats.json"
+    "analyze": "webpack --config internals/webpack/webpack.prod.js --profile --json > stats.json",
+    "test": "jest",
+    "test-coverage": "jest --collectCoverage"
   },
   "repository": {
     "type": "git",
@@ -29,7 +31,8 @@
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.12.4"
+    "eslint-plugin-react": "^7.12.4",
+    "jest": "^24.7.1"
   },
   "dependencies": {
     "@babel/core": "^7.4.3",
