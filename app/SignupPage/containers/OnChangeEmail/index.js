@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 
 import { addEmail, checkValidEmail } from '../../actions/actions';
 
-import Email from '../../components/Email';
+import Email from '../../../ReusableComponents/Email';
 
 const mapStateToProps = state => ({
   isInvalidEmail: state.signupReducer.isInvalidEmail,

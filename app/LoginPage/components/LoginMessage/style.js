@@ -1,6 +1,6 @@
 const style = {
   font: {
-    fontSize: 24,
+    fontSize: 28,
   },
 };
 

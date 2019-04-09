@@ -6,7 +6,7 @@ import style from './style';
 
 const LoginMessage = memo(() => (
   <Typography
-    variant="h3"
+    variant="h2"
     align="center"
     style={style.font}
     color="secondary"
