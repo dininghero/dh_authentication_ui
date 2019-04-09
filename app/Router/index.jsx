@@ -5,14 +5,14 @@ import { MuiThemeProvider } from '@material-ui/core/styles';
 import theme from './theme';
 
 import SignupForm from '../SignupPage/components/SignupForm';
-import Login from '../LoginPage/Login';
+import Login from '../LoginPage/components/LoginForm';
 
 const Router = () => (
   <MuiThemeProvider theme={theme}>
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={SignupForm} />
         <Route path="/login" component={Login} />
+        <Route path="/signup" component={SignupForm} />
       </Switch>
     </BrowserRouter>
   </MuiThemeProvider>

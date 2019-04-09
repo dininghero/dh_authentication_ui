@@ -9,9 +9,6 @@ import {
   CHECK_VALID_FIRSTNAME,
   CHECK_VALID_LASTNAME,
   CHECK_VALID_EMAIL,
-  FETCH_POST_BEGIN,
-  FETCH_POST_SUCCESS,
-  FETCH_POST_ERROR,
 } from './constants';
 
 export function addFirstName(fn) {
@@ -83,31 +80,9 @@ export function checkValidEmail(isValid) {
 }
 
 /* FETCH POST */
-
-function fetchPostBegin() {
-  return {
-    type: FETCH_POST_BEGIN,
-  };
-}
-
-function fetchPostSuccess(response) {
-  return {
-    type: FETCH_POST_SUCCESS,
-    payload: response,
-  };
-}
-
-function fetchPostError(response) {
-  return {
-    type: FETCH_POST_ERROR,
-    payload: response,
-  };
-}
-
 export function postCreateAccount(dataObj) {
-  let status = 0;
   return (dispatch) => {
-    dispatch(fetchPostBegin());
+  // dispatch(fetchPostBegin());
     return fetch('http://localhost:3000/rac', {
       method: 'post',
       headers: {
@@ -115,16 +90,8 @@ export function postCreateAccount(dataObj) {
       },
       body: JSON.stringify(dataObj),
     })
-      .then((res) => {
-        status = res.status;
-        return res.json();
-      })
-      .then((reponse) => {
-        if (status !== 201) {
-          dispatch(fetchPostError(reponse.response));
-        }
-        dispatch(fetchPostSuccess(reponse.response));
-      })
+      .then(res => res.json())
+      .then(json => console.log(json))
       .catch(err => console.log(err));
   };
 }

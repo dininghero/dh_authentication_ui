@@ -9,10 +9,9 @@ import DisableButton from '../../containers/DisableButton';
 import OnChangeFirstName from '../../containers/OnChangeFirstName';
 import OnChangeLastName from '../../containers/OnChangeLastName';
 import OnChangeEmail from '../../containers/OnChangeEmail';
-import DisplayAccountResponse from '../../containers/DisplayAccountResponse';
 
-import CompanyLogo from '../CompanyLogo';
-import Welcome from '../Welcome';
+import CompanyLogo from '../../../ReusableComponents/CompanyLogo';
+import WelcomeMessage from '../WelcomeMessage';
 import EncryptionIcon from '../EncryptionIcon';
 
 import style from './style';
@@ -25,7 +24,7 @@ const SignupTree = () => (
     </Grid>
 
     <Grid item xs={12}>
-      <Welcome />
+      <WelcomeMessage />
     </Grid>
 
     <Grid item xs={6}>
@@ -61,10 +60,6 @@ const SignupTree = () => (
 
     <Grid item xs={12}>
       <EncryptionIcon />
-    </Grid>
-
-    <Grid item xs={12}>
-      <DisplayAccountResponse />
     </Grid>
 
   </Grid>

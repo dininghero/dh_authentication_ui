@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Button from '@material-ui/core/Button';
 
-import Center from '../../../StyledComponents/Center';
+import Center from '../../../ReusableComponents/Center';
 
 const CreateAccountButton = ({
   isAgreementChecked,

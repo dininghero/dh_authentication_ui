@@ -1,8 +1,8 @@
 import React, { memo } from 'react';
 
-import Center from '../../../StyledComponents/Center';
+import Center from '../Center';
 
-import dhLogo from '../../../images/dh_logo.png';
+import dhLogo from '../../images/dh_logo.png';
 
 const CompanyLogo = memo(() => (
   <Center>
