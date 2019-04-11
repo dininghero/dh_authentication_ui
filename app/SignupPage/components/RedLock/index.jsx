@@ -5,7 +5,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Lock from '@material-ui/icons/Lock';
 import Typography from '@material-ui/core/Typography';
 
-const EncryptionIcon = memo(() => (
+const RedLock = memo(() => (
   <Grid
     container
     direction="column"
@@ -14,15 +14,15 @@ const EncryptionIcon = memo(() => (
   >
     <Grid item>
       <IconButton disabled>
-        <Lock />
+        <Lock style={{ color: '#dc3545' }} />
       </IconButton>
     </Grid>
     <Grid item>
-      <Typography variant="caption" color="textSecondary">
-        256-bit Encryption
+      <Typography variant="caption" style={{ color: '#dc3545' }}>
+        Email already exist!
       </Typography>
     </Grid>
   </Grid>
 ));
 
-export default EncryptionIcon;
+export default RedLock;

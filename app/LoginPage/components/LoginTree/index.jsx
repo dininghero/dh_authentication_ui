@@ -4,10 +4,13 @@ import Grid from '@material-ui/core/Grid';
 
 import OnChangeDisplayPassword from '../../containers/OnChangeDisplayPassword';
 import OnChangeEmail from '../../containers/OnChangeEmail';
+import OnLoginEvent from '../../containers/OnLoginEvent';
+import DisableLoginButton from '../../containers/DisableLoginButton';
 
-import LoginButton from '../LoginButton';
 import CompanyLogo from '../../../ReusableComponents/CompanyLogo';
 import LoginMessage from '../LoginMessage';
+import NewUserMessage from '../NewUserMessage';
+import ForgotPasswordMessage from '../ForgotPasswordMessage';
 
 const LoginTree = () => (
   <Grid container spacing={24}>
@@ -29,7 +32,19 @@ const LoginTree = () => (
     </Grid>
 
     <Grid item xs={12}>
-      <LoginButton />
+      <OnLoginEvent />
+    </Grid>
+
+    <Grid item xs={12}>
+      <DisableLoginButton />
+    </Grid>
+
+    <Grid item xs={12}>
+      <ForgotPasswordMessage />
+    </Grid>
+
+    <Grid item xs={12}>
+      <NewUserMessage />
     </Grid>
 
   </Grid>

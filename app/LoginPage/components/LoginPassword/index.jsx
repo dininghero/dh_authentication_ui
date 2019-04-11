@@ -9,7 +9,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
 
-const Password = ({
+const LoginPassword = ({
   toggleShowPassword,
   addPassword,
   isPasswordShowing,
@@ -30,10 +30,10 @@ const Password = ({
   </FormControl>
 );
 
-Password.propTypes = {
+LoginPassword.propTypes = {
   isPasswordShowing: PropTypes.bool.isRequired,
   toggleShowPassword: PropTypes.func.isRequired,
   addPassword: PropTypes.func.isRequired,
 };
 
-export default Password;
+export default LoginPassword;

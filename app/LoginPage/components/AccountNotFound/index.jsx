@@ -2,15 +2,15 @@ import React, { memo } from 'react';
 
 import Typography from '@material-ui/core/Typography';
 
-const LoginMessage = memo(() => (
+const AccountNotFound = memo(() => (
   <Typography
-    variant="h2"
+    variant="caption"
     align="center"
-    style={{ fontSize: 28 }}
+    style={{ color: '#dc3545' }}
     color="secondary"
   >
-    Log in to your DiningHero account:
+    Account not found! Try another email.
   </Typography>
 ));
 
-export default LoginMessage;
+export default AccountNotFound;

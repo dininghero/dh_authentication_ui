@@ -9,10 +9,10 @@ import DisableButton from '../../containers/DisableButton';
 import OnChangeFirstName from '../../containers/OnChangeFirstName';
 import OnChangeLastName from '../../containers/OnChangeLastName';
 import OnChangeEmail from '../../containers/OnChangeEmail';
+import OnSignupEvent from '../../containers/OnSignupEvent';
 
 import CompanyLogo from '../../../ReusableComponents/CompanyLogo';
 import WelcomeMessage from '../WelcomeMessage';
-import EncryptionIcon from '../EncryptionIcon';
 
 import style from './style';
 
@@ -59,7 +59,7 @@ const SignupTree = () => (
     </Grid>
 
     <Grid item xs={12}>
-      <EncryptionIcon />
+      <OnSignupEvent />
     </Grid>
 
   </Grid>

@@ -1,5 +1,6 @@
 module.exports = {
+  clearMocks: true,
   verbose: true,
   coverageDirectory: './spec/coverage',
-  testEnvironment: 'node',
+  setupFiles: ['<rootDir>/enzyme.config.js'],
 };

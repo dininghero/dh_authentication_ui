@@ -2,13 +2,11 @@ import React, { memo } from 'react';
 
 import Typography from '@material-ui/core/Typography';
 
-import style from './style';
-
 const Welcome = memo(() => (
   <Typography
     variant="h2"
     align="center"
-    style={style.font}
+    style={{ fontSize: 36 }}
     color="secondary"
   >
     Welcome to DiningHero!

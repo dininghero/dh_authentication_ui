@@ -14,7 +14,6 @@ const LoginAccount = ({
   <form onSubmit={(e) => {
     e.preventDefault();
     createAccount({ email: email, pw: password });
-    e.target.reset();
   }}
   >
     <LoginTree />

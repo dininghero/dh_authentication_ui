@@ -9,7 +9,6 @@ const Email = ({ addEmail, isInvalidEmail }) => (
     helperText={isInvalidEmail ? 'Please enter a valid email address.' : null}
     fullWidth
     label="Email Address"
-    margin="normal"
     required
     onChange={addEmail}
     type="text"

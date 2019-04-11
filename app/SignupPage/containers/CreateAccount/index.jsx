@@ -15,7 +15,12 @@ const CreateAccount = ({
 }) => (
   <form onSubmit={(e) => {
     e.preventDefault();
-    createAccount({ email: email, pw: password, restaurant: firstName });
+    createAccount({
+      email: email,
+      pw: password,
+      firstname: firstName,
+      lastname: lastName,
+    });
     e.target.reset();
   }}
   >
