@@ -13,6 +13,7 @@ const Router = () => (
       <Switch>
         <Route path="/login" component={LoginForm} />
         <Route path="/signup" component={SignupForm} />
+        {/* <Route path="/lostpassword" component={} /> */}
       </Switch>
     </BrowserRouter>
   </MuiThemeProvider>

@@ -2,15 +2,15 @@ import React, { memo } from 'react';
 
 import Typography from '@material-ui/core/Typography';
 
-const LoginMessage = memo(() => (
+const ForgotPasswordMessage = memo(() => (
   <Typography
     variant="h2"
     align="center"
-    style={{ fontSize: 28 }}
+    style={{ fontSize: 13 }}
     color="secondary"
   >
-    Log in to your DiningHero account:
+    Forgot your password?
   </Typography>
 ));
 
-export default LoginMessage;
+export default ForgotPasswordMessage;

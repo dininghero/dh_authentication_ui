@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
+    jest: true,
   },
   extends: 'airbnb',
   globals: {
@@ -20,5 +21,6 @@ module.exports = {
   ],
   rules: {
     "no-underscore-dangle": "off",
+    "object-shorthand": "off",
   },
 };

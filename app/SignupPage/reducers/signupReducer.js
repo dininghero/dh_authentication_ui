@@ -9,6 +9,8 @@ import {
   CHECK_VALID_FIRSTNAME,
   CHECK_VALID_LASTNAME,
   CHECK_VALID_EMAIL,
+  FETCH_POST_SUCCESS,
+  FETCH_POST_ERROR,
 } from '../actions/constants';
 
 const initialState = {
@@ -22,6 +24,8 @@ const initialState = {
   isInvalidEmail: false,
   isPasswordShowing: false,
   isAgreementChecked: false,
+  isFailure: false,
+  isSuccessful: false,
 };
 
 const signupReducer = (state = initialState, action) => {
@@ -75,6 +79,17 @@ const signupReducer = (state = initialState, action) => {
       return {
         ...state,
         isInvalidEmail: action.payload,
+      };
+    case FETCH_POST_SUCCESS:
+      return {
+        ...state,
+        isSuccessful: action.payload,
+        isFailure: false,
+      };
+    case FETCH_POST_ERROR:
+      return {
+        ...state,
+        isFailure: action.payload,
       };
     default:
       return state;

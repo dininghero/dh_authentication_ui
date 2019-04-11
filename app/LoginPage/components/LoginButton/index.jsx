@@ -1,10 +1,11 @@
-import React, { memo } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import Button from '@material-ui/core/Button';
 
 import ButtonPosition from './ButtonPosition';
 
-const CreateAccountButton = memo(() => (
+const LoginButton = ({ isInvalidEmail }) => (
   <ButtonPosition>
     <Button
       variant="contained"
@@ -12,10 +13,15 @@ const CreateAccountButton = memo(() => (
       size="large"
       color="primary"
       fullWidth
+      disabled={isInvalidEmail}
     >
       Log In
     </Button>
   </ButtonPosition>
-));
+);
 
-export default CreateAccountButton;
+LoginButton.propTypes = {
+  isInvalidEmail: PropTypes.bool.isRequired,
+};
+
+export default LoginButton;
