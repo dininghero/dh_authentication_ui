@@ -62,6 +62,7 @@ export function checkAccountExist(emailExist) {
 export function postCreateAccount(dataObj) {
   return (dispatch) => {
     return fetch('http://localhost:3000/ral', {
+      credentials: 'include',
       method: 'post',
       headers: {
         'Content-Type': 'application/json',
@@ -69,6 +70,7 @@ export function postCreateAccount(dataObj) {
       body: JSON.stringify(dataObj),
     })
       .then((res) => {
+        // console.log(document.cookie);
         if (res.status === 200) {
           dispatch(isAuthorised(true));
         }
