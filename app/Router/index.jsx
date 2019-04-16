@@ -6,6 +6,7 @@ import theme from './theme';
 
 import SignupForm from '../SignupPage/components/SignupForm';
 import LoginForm from '../LoginPage/components/LoginForm';
+import LostPasswordForm from '../LostPasswordPage/components/LostPasswordForm';
 
 const Router = () => (
   <MuiThemeProvider theme={theme}>
@@ -13,7 +14,7 @@ const Router = () => (
       <Switch>
         <Route path="/login" component={LoginForm} />
         <Route path="/signup" component={SignupForm} />
-        {/* <Route path="/lostpassword" component={} /> */}
+        <Route exact path="/" component={LostPasswordForm} />
       </Switch>
     </BrowserRouter>
   </MuiThemeProvider>
